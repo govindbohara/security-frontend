@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./index.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Create an Account</title>
+  </head>
+  <body>
+    <script src="./index.js" defer></script>
+    <header>
+      <nav>
+        <div><p class="header-text">Sonika</p></div>
+        <div class="nav-links">
+          <a href="#" style="color: #6c63ff">Home</a>
+          <a href="#">Login</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="form-container">
+        <h1>Create an Account</h1>
+        <form class="form" id="form">
+          <fieldset class="input-cont">
+            <label for="username">Name</label>
+            <input
+              class="input"
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Username"
+            />
+            <p class="error-msg" id="error-name"></p>
+          </fieldset>
+          <fieldset class="input-cont">
+            <label for="username">Email</label>
+            <input
+              class="input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+            />
+            <p class="error-msg" id="error-email"></p>
+          </fieldset>
+          <fieldset class="input-cont">
+            <label for="password">Password</label>
+            <input
+              class="input"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+            />
+            <p class="error-msg" id="error-password"></p>
+          </fieldset>
+          <fieldset class="input-cont">
+            <label for="username">Enter Captcha</label>
+            <input
+              class="input"
+              type="text"
+              id="captchaValue"
+              value=""
+              disabled
+            />
+            <p class="generate-captcha-text" id="generate-captcha">
+              Generate new captcha?
+            </p>
+          </fieldset>
+          <div>
+            <input
+              class="input"
+              type="text"
+              name="captcha"
+              id="valid-captcha"
+              placeholder="Enter above captcha"
+            />
+            <p class="error-msg" id="error-captcha"></p>
+          </div>
+
+          <div class="btn-group">
+            <button type="submit" id="submit">Create Account</button>
+          </div>
+        </form>
+      </div>
+      <div class="right-content">
+        <figure class="create-acc">
+          <img src="./public/create.svg" alt="create account" class="img" />
+        </figure>
+
+        <div class="password-strength" id="password-meter">
+          <div class="password-wrong">
+            <p class="password-text" id="password-character">
+              Password must be greater than 6 characters
+            </p>
+          </div>
+          <div class="password-wrong">
+            <p class="password-text" id="password-upper">
+              Password must contain Uppercase Letter
+            </p>
+          </div>
+          <div class="password-wrong">
+            <p class="password-text" id="password-symbol">
+              Password must contain Symbol
+            </p>
+          </div>
+          <div class="password-wrong">
+            <p class="password-text" id="password-number">
+              Password must contain Number
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
